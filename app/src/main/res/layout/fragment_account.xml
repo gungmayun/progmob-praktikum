@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AccountFragment"
+    android:background="#f7efef"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7efef"
+        android:paddingBottom="90dp"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="425dp">
+
+        <LinearLayout
+            android:background="@drawable/bg_account_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_edit_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_mode_edit_black_24dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/user"/>
+
+            <TextView
+                android:id="@+id/tv_account_name"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adi Putra"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:id="@+id/tv_account_alamat"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perumahan Andika Graha, Kediri, Tabanan"
+                android:textColor="#ded8d8"
+                android:textStyle="normal"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14dp"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="328dp"
+            android:gravity="center_horizontal"
+            android:elevation="3dp"
+            android:background="@drawable/circle_photo"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:id="@+id/tv_saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:text="SALDOKU"
+                android:textColor="#264da6"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical|left"/>
+
+            <TextView
+                android:id="@+id/tv_jml_saldo"
+                android:layout_toRightOf="@id/tv_saldo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:text="Rp 100.000"
+                android:textColor="#264da6"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical|right"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_help_outline_black_24dp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Bantuan"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="20dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_library_books_black_24dp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Ketentuan Layanan"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="20dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_security_black_24dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Kebijakan Privasi"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="20dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_star_border_black_24dp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Nilai kami"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_keluar"
+        android:textColor="#fff"
+        android:background="@drawable/btn_account_custom"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_regular"
+        android:elevation="3dp"
+        android:text="KELUAR"
+        tools:targetApi="lollipop" />
+
+    </LinearLayout>
+
+</ScrollView>
