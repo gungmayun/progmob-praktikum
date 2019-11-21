@@ -3,133 +3,96 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ddd"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/nopol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Nomor Polisi"
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_nopol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Nomor Polisi" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        >
 
-        <TextView
-            android:id="@+id/jenis_motor"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Jenis Motor"
-            android:textStyle="bold"
-            android:textColor="#000" />
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="30dp">
 
-        <EditText
-            android:id="@+id/editText_jenis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="20"
-            android:hint="Jenis Motor" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TAMBAH MOTOR"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_nopol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Polisi"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_jenis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jenis Motor"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_tahun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tahun Motor"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Harga Sewa perHari"
+                app:met_floatingLabel="highlight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center">
+
+                <com.spark.submitbutton.SubmitButton
+                    android:id="@+id/button_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tambah Motor"
+                    android:textColor="@color/gray"
+                    app:sub_btn_background="@color/white"
+                    app:sub_btn_duration="2000"
+                    app:sub_btn_line_color="#19C91B"
+                    app:sub_btn_ripple_color="#19C91B"
+                    app:sub_btn_tick_color="@color/white" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_login_custom"
+                android:text="Tambah Motor"
+
+                android:textColor="@android:color/background_light" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/Tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Tahun Motor"
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="4"
-            android:hint="Tahun Produksi Motor"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Harga Sewa "
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Harga Sewa/Hari"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button_add"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@android:color/holo_green_dark"
-            android:text="Tambah Motor"
-            android:textColor="@android:color/background_light"
-            android:layout_margin="5dp"
-            />
-    </LinearLayout>
-        <Button
-            android:id="@+id/button_view"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorPrimary"
-            android:text="Lihat Motor"
-            android:textColor="@android:color/background_light"
-            android:layout_margin="5dp"
-            />
 </LinearLayout>
