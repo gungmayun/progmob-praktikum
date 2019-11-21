@@ -10,92 +10,90 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/tv_subtitle"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/indigo_daisy"
         android:text="Sewain Login"
         android:textSize="50sp"
-        android:fontFamily="@font/indigo_daisy"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/tv_subtitle"
-        android:layout_marginLeft="25dp"
         tools:targetApi="jelly_bean" />
 
     <TextView
         android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/et_email"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/tag"
         android:textSize="17sp"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@id/et_email"
-        android:layout_marginLeft="25dp"
         tools:targetApi="jelly_bean" />
 
-    <com.example.adiputra.sewain.EditTextWithPaste
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/et_email"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/e_mail"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="15dp"
-        android:inputType="textEmailAddress"
-        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"
         android:layout_above="@id/et_password"
-        android:background="@drawable/et_login_custom"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
         android:textSize="15sp"
-        tools:targetApi="jelly_bean" />
+        app:met_floatingLabel="highlight" />
 
-    <com.example.adiputra.sewain.EditTextWithClear
+
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:fontFamily="@font/roboto_regular"
-        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        app:met_clearButton="true"
         android:layout_centerInParent="true"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/et_login_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
         android:textSize="15sp"
-        tools:targetApi="jelly_bean" />
+        app:met_floatingLabel="highlight" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_password"
-        android:background="@drawable/btn_login_custom"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_login_custom"
         android:fontFamily="@font/roboto_regular"
-        android:textColor="@android:color/white"
-        android:text="@string/login"
         android:onClick="login"
-        tools:targetApi="jelly_bean"
-        tools:ignore="OnClick" />
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        tools:ignore="OnClick"
+        tools:targetApi="jelly_bean" />
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:srcCompat="@drawable/ic_arrow_right_24dp"
         android:layout_above="@id/swipeRight"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ic_arrow_right_24dp" />
 
     <TextView
         android:id="@+id/swipeRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/swipe_left_for_register"
         android:textSize="15sp"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
         tools:targetApi="jelly_bean" />
 
 </RelativeLayout>

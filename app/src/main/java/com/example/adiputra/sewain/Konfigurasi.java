@@ -5,15 +5,15 @@ public class Konfigurasi {
     //Pada tutorial Kali ini, karena kita membuat localhost maka alamatnya tertuju ke IP komputer
     //dimana File PHP tersebut berada
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
-    public static final String URL_ADD="http://172.20.10.4/motor/tambahmotor.php";
-    public static final String URL_GET_ALL = "http://172.20.10.4/motor/lihatmotor.php?email=";
-    public static final String URL_GET_MTR = "http://172.20.10.4/motor/lihatdetailmotor.php?id=";
-    public static final String URL_UPDATE_MTR = "http://172.20.10.4/motor/updatemotor.php";
-    public static final String URL_DELETE_MTR = "http://172.20.10.4/motor/deletemotor.php?id=";
+    public static final String URL_ADD="https://kelompok23.000webhostapp.com/tambahmotor.php";
+    public static final String URL_GET_ALL = "https://kelompok23.000webhostapp.com/lihatmotor.php?email=";
+    public static final String URL_GET_MTR = "https://kelompok23.000webhostapp.com/lihatdetailmotor.php?id=";
+    public static final String URL_UPDATE_MTR = "https://kelompok23.000webhostapp.com/updatemotor.php";
+    public static final String URL_DELETE_MTR = "https://kelompok23.000webhostapp.com/deletemotor.php?id=";
 
-    public static final String URL_ADD_MTA="http://172.20.10.4/motor/tambahmitra.php";
-    public static final String URL_UPDATE_MTA = "http://172.20.10.4/motor/updatemitra.php";
-    public static final String URL_GET_MTA = "http://172.20.10.4/motor/lihatmitra.php?id_mitra=";
+    public static final String URL_ADD_MTA="https://kelompok23.000webhostapp.com/tambahmitra.php";
+    public static final String URL_UPDATE_MTA = "https://kelompok23.000webhostapp.com/updatemitra.php";
+    public static final String URL_GET_MTA = "https://kelompok23.000webhostapp.com/lihatmitra.php?id_mitra=";
 
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP
