@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.spark.submitbutton.SubmitButton;
+
 import java.util.HashMap;
 //import androidx.appcompat.app.AlertDialog;
 //import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +23,7 @@ import java.util.HashMap;
 public class TambahMotor extends AppCompatActivity implements View.OnClickListener{
     DatabaseHelper myDb;
     private EditText editID, editNopol, editJenis, editTahun, editHarga;
-    private Button addData;
+    private SubmitButton addData;
     private Button viewData;
     Button update;
     Button delete;
@@ -41,7 +43,7 @@ public class TambahMotor extends AppCompatActivity implements View.OnClickListen
 //        editID.setText(Preferences.getLoggedInUser(context));
         //PHP
 
-        addData = (Button) findViewById(R.id.button_add);
+        addData = (SubmitButton) findViewById(R.id.button_add);
         viewData = (Button) findViewById(R.id.button_view);
 
         addData.setOnClickListener(this);

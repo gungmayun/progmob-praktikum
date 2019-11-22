@@ -6,76 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/tv_subtitle"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/indigo_daisy"
-        android:text="Sewain Login"
-        android:textSize="50sp"
-        tools:targetApi="jelly_bean" />
-
-    <TextView
-        android:id="@+id/tv_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/et_email"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="50dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="@string/tag"
-        android:textSize="17sp"
-        tools:targetApi="jelly_bean" />
-
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/et_email"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/et_password"
-        android:layout_marginHorizontal="20dp"
-        android:fontFamily="@font/roboto_regular"
-        android:hint="@string/e_mail"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="15dp"
-        android:textSize="15sp"
-        app:met_floatingLabel="highlight" />
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/indigo_daisy"
+            android:text="Sewain Login"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/tag"
+            android:textSize="17sp"
+            tools:targetApi="jelly_bean" />
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            app:mtf_labelColor="#666"
+            app:mtf_image="@drawable/ic_account_circle_black_24dp"
+            >
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email"
+                android:textColor="#333"
+                android:textSize="15sp" />
+        </com.github.florent37.materialtextfield.MaterialTextField>
 
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:met_clearButton="true"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/et_login_custom"
-        android:fontFamily="@font/roboto_regular"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="15sp"
-        app:met_floatingLabel="highlight" />
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            app:mtf_labelColor="#666"
+            app:mtf_image="@drawable/ic_key"
+            >
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:textColor="#333"
+                android:inputType="textPassword"
+                android:textSize="15sp" />
+        </com.github.florent37.materialtextfield.MaterialTextField>
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/btn_login_custom"
-        android:fontFamily="@font/roboto_regular"
-        android:onClick="login"
-        android:text="@string/login"
-        android:textColor="@android:color/white"
-        tools:ignore="OnClick"
-        tools:targetApi="jelly_bean" />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_login_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:onClick="login"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            tools:ignore="OnClick"
+            tools:targetApi="jelly_bean" />
+    </LinearLayout>
 
     <ImageView
         android:layout_width="30dp"
@@ -83,7 +92,6 @@
         android:layout_above="@id/swipeRight"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/ic_arrow_right_24dp" />
-
     <TextView
         android:id="@+id/swipeRight"
         android:layout_width="wrap_content"
@@ -95,5 +103,4 @@
         android:text="@string/swipe_left_for_register"
         android:textSize="15sp"
         tools:targetApi="jelly_bean" />
-
 </RelativeLayout>

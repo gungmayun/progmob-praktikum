@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/abu"
     android:theme="@android:style/Theme.NoTitleBar"
     tools:context=".MainActivity">
 
@@ -21,10 +22,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="30dp"
             android:background="@drawable/rounded_corner"
             android:gravity="center_vertical"
             android:orientation="vertical"
-            android:padding="30dp">
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,7 +35,8 @@
                 android:text="TAMBAH MOTOR"
                 android:gravity="center"
                 android:textColor="#000000"
-                android:textSize="30sp"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
                 />
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -40,6 +44,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nomor Polisi"
+                app:met_floatingLabelTextSize="8sp"
+                android:textSize="10sp"
                 app:met_floatingLabel="highlight" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -47,13 +53,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jenis Motor"
+                app:met_floatingLabelTextSize="8sp"
+
+                android:textSize="10sp"
+
                 app:met_floatingLabel="highlight" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/editText_tahun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:met_floatingLabelTextSize="8sp"
+
                 android:hint="Tahun Motor"
+                android:textSize="10sp"
+
                 app:met_floatingLabel="highlight" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -61,6 +75,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Harga Sewa perHari"
+                app:met_floatingLabelTextSize="8sp"
+
+                android:textSize="10sp"
+
                 app:met_floatingLabel="highlight" />
 
             <LinearLayout
