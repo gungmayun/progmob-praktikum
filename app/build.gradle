@@ -36,4 +36,5 @@ dependencies {
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'me.spark:submitbutton:1.0.1'
     implementation 'com.github.florent37:materialtextfield:1.0.7'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
 }
