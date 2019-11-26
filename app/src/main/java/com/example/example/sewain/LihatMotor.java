@@ -23,7 +23,7 @@ public class LihatMotor extends AppCompatActivity implements ListView.OnItemClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lihat_motor);
+        setContentView(R.layout.fragment_home);
         listView =(ListView) findViewById(R.id.listView);
         listView.setOnItemClickListener(this);
         getJSON();
@@ -40,10 +40,13 @@ public class LihatMotor extends AppCompatActivity implements ListView.OnItemClic
                 JSONObject jo = result.getJSONObject(i);
                 String id = jo.getString(Konfigurasi.TAG_ID);
                 String nopol = jo.getString(Konfigurasi.TAG_NOPOL);
+                String jenis = jo.getString(Konfigurasi.TAG_JENIS);
 
                 HashMap<String,String> motor = new HashMap<>();
+
                 motor.put(Konfigurasi.TAG_ID,id);
                 motor.put(Konfigurasi.TAG_NOPOL,nopol);
+                motor.put(Konfigurasi.TAG_JENIS,jenis);
                 list.add(motor);
             }
 
@@ -53,8 +56,8 @@ public class LihatMotor extends AppCompatActivity implements ListView.OnItemClic
 
         ListAdapter adapter = new SimpleAdapter(
                 LihatMotor.this, list, R.layout.list_lihat_motor,
-                new String[]{Konfigurasi.TAG_ID,Konfigurasi.TAG_NOPOL},
-                new int[]{R.id.id, R.id.nopol});
+                new String[]{Konfigurasi.TAG_NOPOL,Konfigurasi.TAG_JENIS},
+                new int[]{R.id.nopol, R.id.jenis_motor});
         listView.setAdapter(adapter);
     }
 

@@ -40,10 +40,10 @@ public class TambahMotor extends AppCompatActivity implements View.OnClickListen
         //PHP
 
         addData = (SubmitButton) findViewById(R.id.button_add);
-        viewData = (Button) findViewById(R.id.button_view);
+
 
         addData.setOnClickListener(this);
-        viewData.setOnClickListener(this);
+
 //        login_username = Preferences.getLoggedInUser(this.getBaseContext());
 //        Log.d("maudong",Preferences.getLoggedInUser(getParent().getBaseContext()));
 //        update = (Button) findViewById(R.id.button_update);
@@ -96,12 +96,8 @@ public class TambahMotor extends AppCompatActivity implements View.OnClickListen
     }
     @Override
     public void onClick(View v) {
-        if (v == addData) {
-            addMotor();
-        }
 
-        if (v == viewData) {
-            startActivity(new Intent(this, LihatMotor.class));
+            addMotor();
         }
     }
 
@@ -290,4 +286,4 @@ public class TambahMotor extends AppCompatActivity implements View.OnClickListen
 //        editTahun.getText().clear();
 //        editHarga.getText().clear();
 //    }
-}
+

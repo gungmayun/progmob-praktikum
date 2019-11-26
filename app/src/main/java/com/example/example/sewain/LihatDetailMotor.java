@@ -174,7 +174,7 @@ public class LihatDetailMotor extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
                         deleteMotor();
-                        startActivity(new Intent(LihatDetailMotor.this,LihatMotor.class));
+//                        startActivity(new Intent(LihatDetailMotor.this,HomeFragment.class));
                     }
                 });
 

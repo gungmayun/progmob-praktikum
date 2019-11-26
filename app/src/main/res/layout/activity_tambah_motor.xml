@@ -44,8 +44,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nomor Polisi"
-                app:met_floatingLabelTextSize="8sp"
-                android:textSize="10sp"
+                android:inputType="text"
+                app:met_floatingLabelTextSize="15sp"
+                android:textSize="15sp"
                 app:met_floatingLabel="highlight" />
 
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -53,9 +54,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jenis Motor"
-                app:met_floatingLabelTextSize="8sp"
-
-                android:textSize="10sp"
+                android:inputType="text"
+                app:met_floatingLabelTextSize="15sp"
+                android:textSize="15sp"
 
                 app:met_floatingLabel="highlight" />
 
@@ -63,10 +64,10 @@
                 android:id="@+id/editText_tahun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:met_floatingLabelTextSize="8sp"
-
+                app:met_floatingLabelTextSize="15sp"
+                android:inputType="number"
                 android:hint="Tahun Motor"
-                android:textSize="10sp"
+                android:textSize="15sp"
 
                 app:met_floatingLabel="highlight" />
 
@@ -74,12 +75,11 @@
                 android:id="@+id/editText_harga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Harga Sewa perHari"
-                app:met_floatingLabelTextSize="8sp"
-
-                android:textSize="10sp"
-
-                app:met_floatingLabel="highlight" />
+                android:hint="Harga Sewa / Hari"
+                app:met_floatingLabelTextSize="15sp"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+                android:inputType="number"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,18 +99,6 @@
                     app:sub_btn_ripple_color="#19C91B"
                     app:sub_btn_tick_color="@color/white" />
             </LinearLayout>
-
-
-            <Button
-                android:id="@+id/button_view"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/btn_login_custom"
-                android:text="Tambah Motor"
-
-                android:textColor="@android:color/background_light" />
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
