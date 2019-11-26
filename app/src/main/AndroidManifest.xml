@@ -14,20 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.example.sewain.EditProfileActivity"></activity>
-        <activity android:name="com.example.example.sewain.LihatDetailMotor" />
-        <activity android:name="com.example.example.sewain.LihatTransaksi" />
-        <activity android:name="com.example.example.sewain.LihatMotor" />
-        <activity android:name="com.example.example.sewain.TambahMotor" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".LihatDetailMotor" />
+        <activity android:name=".LihatTransaksi" />
+        <activity android:name=".LihatMotor" />
+        <activity android:name=".TambahMotor" />
         <activity
-            android:name="com.example.example.sewain.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.example.sewain.Main2Activity"
+            android:name=".Main2Activity"
             android:label="@string/title_activity_main2" />
         <activity
-            android:name="com.example.example.sewain.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

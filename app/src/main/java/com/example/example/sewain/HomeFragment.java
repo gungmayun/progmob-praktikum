@@ -3,11 +3,15 @@ package com.example.example.sewain;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
 
 
 /**
@@ -15,22 +19,23 @@ import android.widget.Button;
  */
 public class HomeFragment extends Fragment {
     private static final int PERMISSION_REQUEST_CODE = 100;
-    Button btnTambah;
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        btnTambah = (Button) view.findViewById(R.id.tambah);
-        btnTambah.setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(requireContext(),TambahMotor.class));
-                requireActivity().finish();
+                Intent intent = new Intent(requireContext(),TambahMotor.class);
+                startActivity(intent);
             }
         });
         return view;

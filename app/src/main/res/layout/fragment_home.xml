@@ -4,20 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
-
-    <LinearLayout
+    tools:context=".HomeFragment"
+    tools:showIn="@layout/activity_test">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/tambah"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="200dp"
-            android:layout_gravity="center"
-            android:text="Tambah Motor">
-        </Button>
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:paddingBottom="59dp"/>
 </ScrollView>
