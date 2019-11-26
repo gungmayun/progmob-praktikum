@@ -1,87 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent" android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp" tools:context=".EditProfileActivity">
-    <LinearLayout
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/indigo_daisy"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="25dp"
+        tools:targetApi="jelly_bean" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lets Customized your profile"
+        android:textSize="17sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="50dp"
+        tools:targetApi="jelly_bean"
+        android:layout_marginLeft="25dp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/et_name1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Full Name"
-            android:textStyle="bold"
-            android:textColor="#000" />
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/et_login_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:textSize="15sp"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_helperTextAlwaysShown="false"
+        app:met_floatingLabelTextSize="10sp"
+        tools:targetApi="jelly_bean" />
 
-        <EditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Full Name" />
-    </LinearLayout>
 
-    <LinearLayout
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:hint="@string/e_mail"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/et_login_custom"
+        android:textSize="15sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextSize="10sp"
+        tools:targetApi="jelly_bean" />
 
-        <TextView
-            android:id="@+id/et_email1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Email"
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="25"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:hint="@string/password"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:inputType="textPassword"
+        android:background="@drawable/et_login_custom"
+        android:textSize="15sp"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextSize="10sp"
+        tools:targetApi="jelly_bean" />
 
-        <TextView
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Password"
-            android:textStyle="bold"
-            android:textColor="#000" />
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="4"
-            android:hint="New Password"
-            android:inputType="textPassword" />
-    </LinearLayout>
 
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Profile"
-        android:id="@+id/btnUpdate" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="30dp"
+            android:text="Update"
+            tools:targetApi="jelly_bean" />
+    </RelativeLayout>
 
 </LinearLayout>

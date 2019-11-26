@@ -1,128 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent" android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp" tools:context=".LihatDetailMotor">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID Motor" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText_id" />
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".LihatDetailMotor">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/nopol"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Nomor Polisi"
-            android:textStyle="bold"
-            android:textColor="#000" />
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="30dp">
 
-        <EditText
-            android:id="@+id/editText_nopol"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="TAMBAH MOTOR"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:visibility="gone"
+                android:inputType="text"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="15sp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_nopol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Polisi"
+                android:inputType="text"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="15sp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_jenis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jenis Motor"
+                android:inputType="text"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+
+                app:met_floatingLabelTextSize="15sp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_tahun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tahun Motor"
+                android:inputType="number"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+
+                app:met_floatingLabelTextSize="15sp" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/editText_harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Harga Sewa / Hari"
+                android:inputType="number"
+                android:textSize="15sp"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Nomor Polisi" />
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update Data Motor" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hapus Data Motor" />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/jenis_motor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Jenis Motor"
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_jenis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="20"
-            android:hint="Jenis Motor" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/Tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Tahun Motor"
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="4"
-            android:hint="Tahun Produksi Motor"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Harga Sewa "
-            android:textStyle="bold"
-            android:textColor="#000" />
-
-        <EditText
-            android:id="@+id/editText_harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Harga Sewa/Hari"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Data Motor"
-        android:id="@+id/buttonUpdate" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hapus Data Motor"
-        android:id="@+id/buttonDelete" />
 
 </LinearLayout>
